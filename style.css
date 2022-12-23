@@ -2,52 +2,93 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px dashed red;
+
 }
 
 html {
   font-size: 16px;
+  color: #2b2d42;
 }
 
 body {
   width: 100%;
   min-height: 100vh;
-
+  background-color: #edf2f4;
 }
 
 .header-content {
   grid-area: header;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .grid-container {
   grid-area: grid-game;
   display: grid;
-  height: 500px;
   width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 0.5em solid #2b2d42;
+  border-radius: 1em;
 
 }
 
 
 .mod-buttons {
   grid-area: buttons;
+  text-align: center;
+  font-size: 1.25rem;
+
 }
+
+.mod-buttons h2 {
+  margin-bottom: 2em;
+}
+
+.mod-buttons-button {
+  display: block;
+  width: 8em;
+  padding: 0.25em;
+  margin: 1rem auto;
+  background-color: #2b2d42;
+  color: #edf2f4;
+  font-size: 1.25rem;
+  border-radius: 0.5em;
+}
+
+.mod-buttons-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+.mod-buttons-palette {
+  width: 100px;
+  height: 100px;
+
+}
+
+
+.mod-buttons-rangevalue {
+  display: block;
+}
+
 
 .footer-elements {
   grid-area: footer;
+  text-align: center;
+  font-size: 1rem;
+  margin: auto;
 }
 
 
 main {
   height: 100vh;
   display: grid;
-  grid-template-columns: 3fr 6fr 1fr;
-  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-columns: 2fr 6fr 1fr;
+  grid-template-rows: 2fr 8fr 2fr;
   grid-template-areas: "header header header"
-    "buttons grid-game ."
+    "buttons grid-game grid-game"
     "footer footer footer";
 
 }
-
-
-
-/*GRID GAME STYLES*/
